@@ -1,0 +1,39 @@
+	class Solution {
+		public String removeDuplicates(String S) {
+	        int l=-1, n=0,len=S.length();
+	        String r="";
+	        char[] a=new char[len];
+	        
+	        while(n<(len-1)){
+	        	
+	            if(S.charAt(n)!=S.charAt(n+1)){
+	            	a[++l]=S.charAt(n++);
+	            }
+	           
+	            else{
+	            	n+=2;
+	            		while(n<len && l>=0){
+	            			if(S.charAt(n)==a[l]){
+	            				n++; l--;
+	            			}
+	            			else
+	            				break;
+	            		}
+	            }
+	            
+	        }
+	        
+	        if(n==(S.length()-1)){
+	        	a[++l]=S.charAt(n);
+	        }
+	        
+	        for(int i=0 ; i<=l; i++){
+	        	r+=a[i];
+	        }
+	        return r;
+	        }
+		
+		
+		}
+
+
