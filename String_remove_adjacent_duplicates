@@ -1,4 +1,8 @@
-	class Solution {
+//https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
+
+
+
+class Solution {
 		public String removeDuplicates(String S) {
 	        int l=-1, n=0,len=S.length();
 	        String r="";
